@@ -1,29 +1,10 @@
 package com.example.farms.repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+import com.example.farms.model.Item;
 
-@Repository
-public class ItemRepository {
+public interface ItemRepository extends CrudRepository<Item,Integer> {
 	
-	@Autowired
-	JdbcTemplate jdbcTemplate;
-
-	public List<String> getAllItems(String dropParam) {
-		List<String> allItems = new ArrayList<>();
-		System.out.println(dropParam);
-		if(dropParam.contentEquals("booro")) {
-		allItems.addAll(jdbcTemplate.queryForList("SELECT ItemName FROM Booro_Items; ",String.class));
-		} else if (dropParam.contentEquals("bowl")) {
-			allItems.addAll(jdbcTemplate.queryForList("SELECT ItemName FROM Bowl_items;",String.class));
-		}
-		
-		
-		return allItems;
-	}
 
 }
