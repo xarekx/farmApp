@@ -11,8 +11,9 @@ public class Mob {
 	@Id
 	int id_mob;
 	String name_mob;
-	int id_land_mob;
+	int id_mob_land;
 	
+
 	public Mob() {
 		
 	}
@@ -29,10 +30,14 @@ public class Mob {
 	public void setName_mob(String name_mob) {
 		this.name_mob = name_mob;
 	}
-	public int getId_land_mob() {
-		return id_land_mob;
+	public int getId_mob_land() {
+		return id_mob_land;
 	}
-	public void setId_land_mob(int id_land_mob) {
-		this.id_land_mob = id_land_mob;
+
+	public void setId_mob_land(int id_mob_land) {
+		this.id_mob_land = id_mob_land;
 	}
+
+	
+
 }
