@@ -10,7 +10,8 @@ import com.example.farms.model.Loot;
 
 public interface DropRepository extends CrudRepository<Loot,Integer> {
 	
-	@Query(value = "SELECT name_item from Drops d Join Items i on d.id_item = i.id_item join party p on d.id_party_farm = p.id_party_farm where p.id_party_farm =:id", nativeQuery = true)
+	@Query(value = "Select name_item from Items i join Drops d on i.id_item = d.id_item where id_party IN (:id)", 
+			nativeQuery = true)
 	  List<String> findDropsById(@Param("id") int id);
 	
 	

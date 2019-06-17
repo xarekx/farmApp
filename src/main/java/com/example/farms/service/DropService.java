@@ -26,10 +26,13 @@ public class DropService {
 	}
 
 
-	public List<String> getDropsById(int id) {
+	public List<String> getDropsByPartyId(int id) {
 		return dropRepository.findDropsById(id);
-		
-		
 	}
+	
+//	public Loot postLoot(Loot loot) {
+//		
+//		return dropRepository.save(loot);
+//	}
 
 }

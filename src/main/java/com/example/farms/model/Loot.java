@@ -11,11 +11,11 @@ import javax.persistence.Table;
 public class Loot {
 	
 
-	@Id
+	@Id @GeneratedValue
 	private int id_drop;
 	private int id_item;
+	private int id_party;
 	private int item_count;
-	private int id_party_farm;
 	
 	public int getId_drop() {
 		return id_drop;
@@ -47,19 +47,23 @@ public class Loot {
 	}
 
 
-	public int getId_party_farm() {
-		return id_party_farm;
+	public int getId_party() {
+		return id_party;
 	}
 
 
-	public void setId_party_farm(int id_party_farm) {
-		this.id_party_farm = id_party_farm;
+	public void setId_party(int id_party) {
+		this.id_party = id_party;
 	}
+	
+//	public Loot(int id_item, int id_party, int item_count) {
+////		super();
+//		this.id_item = id_item;
+//		this.id_party = id_party;
+//		this.item_count = item_count;
+//	}
 
 
-	
-	
-	
 	public Loot() {
 		
 	}
