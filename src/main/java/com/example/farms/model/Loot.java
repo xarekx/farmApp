@@ -12,63 +12,33 @@ public class Loot {
 	
 
 	@Id @GeneratedValue
-	private int id_drop;
-	private int id_item;
-	private int id_party;
-	private int item_count;
+	private int drop_id;
+	private int item_id;
+	private int party_id;
 	
-	public int getId_drop() {
-		return id_drop;
+	public int getDrop_id() {
+		return drop_id;
 	}
-
-
-	public void setId_drop(int id_drop) {
-		this.id_drop = id_drop;
+	public void setDrop_id(int drop_id) {
+		this.drop_id = drop_id;
 	}
-
-
-	public int getId_item() {
-		return id_item;
+	public int getItem_id() {
+		return item_id;
 	}
-
-
-	public void setId_item(int id_item) {
-		this.id_item = id_item;
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
 	}
-
-
-	public int getItem_count() {
-		return item_count;
+	public int getParty_id() {
+		return party_id;
 	}
-
-
-	public void setItem_count(int item_count) {
-		this.item_count = item_count;
-	}
-
-
-	public int getId_party() {
-		return id_party;
-	}
-
-
-	public void setId_party(int id_party) {
-		this.id_party = id_party;
+	public void setParty_id(int party_id) {
+		this.party_id = party_id;
 	}
 	
-//	public Loot(int id_item, int id_party, int item_count) {
-////		super();
-//		this.id_item = id_item;
-//		this.id_party = id_party;
-//		this.item_count = item_count;
-//	}
-
-
 	public Loot() {
 		
 	}
-	
-	
+
 	
 	
 }

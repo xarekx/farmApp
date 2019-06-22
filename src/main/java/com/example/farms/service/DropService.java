@@ -30,9 +30,5 @@ public class DropService {
 		return dropRepository.findDropsById(id);
 	}
 	
-//	public Loot postLoot(Loot loot) {
-//		
-//		return dropRepository.save(loot);
-//	}
 
 }

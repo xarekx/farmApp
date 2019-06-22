@@ -9,45 +9,29 @@ import javax.persistence.Table;
 public class Item {
 	
 	@Id
-	int id_item;
-	String name_item;
-	int id_mob_drop;
-	int id_zone_drop;
+	int item_id;
+	String item_name;
 	
 	public Item() {
 		
 	}
 	
-	public Item(int id_item, String name_item) {
-		this.id_item = id_item;
-		this.name_item = name_item;
+	public Item(int item_id, String item_name) {
+		this.item_id = item_id;
+		this.item_name = item_name;
 	}
 	
 	public int getId_item() {
-		return id_item;
+		return item_id;
 	}
-	public void setId_item(int id_item) {
-		this.id_item = id_item;
+	public void setId_item(int item_id) {
+		this.item_id = item_id;
 	}
 	public String getName_item() {
-		return name_item;
+		return item_name;
 	}
-	public void setName_item(String name_item) {
-		this.name_item = name_item;
+	public void setName_item(String item_name) {
+		this.item_name = item_name;
 	}
-	public int getId_mob_drop() {
-		return id_mob_drop;
-	}
-	public void setId_mob_drop(int id_mob_drop) {
-		this.id_mob_drop = id_mob_drop;
-	}
-	public int getId_zone_drop() {
-		return id_zone_drop;
-	}
-	public void setId_zone_drop(int id_zone_drop) {
-		this.id_zone_drop = id_zone_drop;
-	}
-		
 	
-
 }

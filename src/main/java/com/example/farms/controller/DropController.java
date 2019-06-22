@@ -34,11 +34,7 @@ public class DropController {
 		return dropService.getDropsByPartyId(id);
 	}
 	
-	@PostMapping("/droped")
-	public String postDrops(@RequestBody Loot loot) {
-	
-		return loot.toString();
-	}
+
 }
 	
 
