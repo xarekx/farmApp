@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.farms.exception.PartyNotFoundException;
 import com.example.farms.model.Party;
 import com.example.farms.repository.PartyRepository;
 
@@ -21,6 +22,11 @@ public class PartyService {
 		partyRepository.findAll().forEach(partyListId::add);
 		
 		return partyListId;
+	}
+
+	public Party getPartyById(int id) {
+		
+		return partyRepository.findById(id).orElseThrow(() -> new PartyNotFoundException("Cannot find Party with given id"));
 	}
 	
 	
