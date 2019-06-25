@@ -10,7 +10,6 @@ public class Member {
 	}
 	
 	public Member(int id_member, String name_member) {
-		super();
 		this.id_member = id_member;
 		this.name_member = name_member;
 	}
