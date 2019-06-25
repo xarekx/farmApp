@@ -29,6 +29,12 @@ public class PartyService {
 		return partyRepository.findById(id).orElseThrow(() -> new PartyNotFoundException("Cannot find Party with given id"));
 	}
 	
+	public void saveParty(Party party) {
+		
+		partyRepository.save(party);
+		
+	}
+	
 	
 
 }

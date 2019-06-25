@@ -34,6 +34,13 @@ public class DropController {
 		return dropService.getDropsByPartyId(id);
 	}
 	
+	@PostMapping("/add")
+	public void saveDrops(@RequestBody List<Loot> loot) {
+		
+		dropService.saveDrops(loot);
+		
+	}
+	
 
 }
 	
