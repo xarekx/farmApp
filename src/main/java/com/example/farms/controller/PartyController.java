@@ -34,7 +34,7 @@ public class PartyController {
 		return partyService.getPartyById(id);
 	}
 	
-	@PostMapping("/party")
+	@PostMapping("/add")
 	public void addParty(@RequestBody Party party) {
 		
 		partyService.saveParty(party);
