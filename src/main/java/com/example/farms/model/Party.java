@@ -1,5 +1,11 @@
 package com.example.farms.model;
 
+
+
+
+
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,8 +19,12 @@ public class Party {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	int party_id;
 	String party_name;
-	String party_date;
+	Date party_date;
 	String member_id;
+	
+	public Party() {
+		
+	}
 	
 	public int getParty_id() {
 		return party_id;
@@ -28,10 +38,10 @@ public class Party {
 	public void setParty_name(String party_name) {
 		this.party_name = party_name;
 	}
-	public String getParty_date() {
+	public Date getParty_date() {
 		return party_date;
 	}
-	public void setParty_date(String party_date) {
+	public void setParty_date(Date party_date) {
 		this.party_date = party_date;
 	}
 	public String getMember_id() {
