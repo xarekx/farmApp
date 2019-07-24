@@ -38,8 +38,6 @@ public class PartyController {
 	public void addParty(@RequestBody Party party) {
 		
 		
-		
-		
 		partyService.saveParty(party);
 		
 		
