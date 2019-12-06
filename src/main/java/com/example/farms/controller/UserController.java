@@ -13,13 +13,13 @@ import com.example.farms.model.User;
 import com.example.farms.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 	
 	@Autowired
 	UserService userService;
 	
-	@GetMapping("/users")
+	@GetMapping("/all")
 	public ResponseEntity<List<User>> getAllUsers() {
 		
 		

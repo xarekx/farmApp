@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.farms.model.Item;
-import com.example.farms.model.Loot;
+import com.example.farms.model.Drop;
 import com.example.farms.model.Mob;
 import com.example.farms.service.MobService;
 
@@ -25,7 +25,7 @@ public class MobController {
 		
 		return mobService.getAllMobs();
 	}
-	
+	//TODO - zamiana
 	@GetMapping(path="/{id}")
 	public List<Item> getAllItemsByMobId(@PathVariable int id) {
 		

@@ -13,12 +13,13 @@ import javax.persistence.Table;
 public class User {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	int user_id;
+	int id;
 	String username;
 	String password;
 	String nickname;
 	String email;
 	Date last_login;
+	Date joined_date;
 	
 	public User() {
 		
@@ -28,7 +29,7 @@ public class User {
 	public User(int user_id, String username, String password, String nickname, String email, Date last_login,
 			Date joined_date) {
 		super();
-		this.user_id = user_id;
+		this.id = user_id;
 		this.username = username;
 		this.password = password;
 		this.nickname = nickname;
@@ -39,10 +40,10 @@ public class User {
 
 
 	public int getUser_id() {
-		return user_id;
+		return id;
 	}
 	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+		this.id = user_id;
 	}
 	public String getUsername() {
 		return username;
@@ -74,7 +75,7 @@ public class User {
 	public void setJoined_date(Date joined_date) {
 		this.joined_date = joined_date;
 	}
-	Date joined_date;
+	
 	
 
 }

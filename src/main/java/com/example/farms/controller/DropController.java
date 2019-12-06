@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.farms.model.Loot;
+import com.example.farms.model.Drop;
 import com.example.farms.service.DropService;
 
 @RestController
@@ -23,7 +23,7 @@ public class DropController {
 	
 	
 	@GetMapping("/all")
-	public @ResponseBody List<Loot> getAllDrops() {
+	public @ResponseBody List<Drop> getAllDrops() {
 		
 		return dropService.getAllDrops();
 	}
@@ -35,7 +35,7 @@ public class DropController {
 	}
 	
 	@PostMapping("/add")
-	public void saveDrops(@RequestBody List<Loot> loot) {
+	public void saveDrops(@RequestBody List<Drop> loot) {
 		
 		dropService.saveDrops(loot);
 		

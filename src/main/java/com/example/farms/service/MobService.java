@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.farms.model.Item;
-import com.example.farms.model.Loot;
+import com.example.farms.model.Drop;
 import com.example.farms.model.Mob;
 import com.example.farms.repository.DropRepository;
 import com.example.farms.repository.ItemRepository;
