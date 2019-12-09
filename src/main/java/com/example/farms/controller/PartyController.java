@@ -38,12 +38,17 @@ public class PartyController {
 		
 		return partyService.getPartyById(id);
 	}
-	//TODO
+	
 	@PostMapping("/create")
 	public void addParty(@RequestBody Party party) {
 		
-		
 		partyService.saveParty(party);
+	}
+	
+	@GetMapping("/maxindex")
+	public int getMaxIndex() {
+		
+		return partyService.getMaxIndex();
 	}
  
 }

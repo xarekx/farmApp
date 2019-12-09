@@ -36,5 +36,11 @@ public class PartyMemberService {
 		return partyMembers;
 	}
 
+	public void saveMember(PartyMember partyMember) {
+
+		partyMemberRepository.save(partyMember);
+		
+	}
+
 
 }

@@ -36,6 +36,11 @@ public class PartyService {
 		
 	}
 	
+	public int getMaxIndex() {
+		
+		return partyRepository.fetchMaxIndex();
+	}
+	
 	
 
 }
